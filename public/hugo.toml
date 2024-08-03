@@ -1,0 +1,69 @@
+baseURL = 'https://jackschua.github.io'
+languageCode = 'en-us'
+title = 'Jack Chua'
+theme = 'cactus'
+
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "About"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Work Experience"
+url = "/experience"
+weight = 2
+
+[[menu.main]]
+name = "Research Projects"
+url = "/projects"
+weight = 3
+
+[[menu.main]]
+name = "Resume"
+url = "/resume.pdf"
+weight = 4
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[params]
+  colortheme = "dark" # dark, light, white, or classic
+  css = ["css/custom.css"]
+
+  # Home page settings
+  description = """Hi ! I'm Jack, a recent alumni of the College of Science at Virginia Tech where I majored in Economics and Data Science with a minor in Statistics. 
+  
+  My interest lies in the intersection of statistical modeling, economic research, and alternative data applications. My prior experience includes a stint in technology consulting where I had the opportunity to work on projects in the financial and energy industry. 
+  
+  In the past years, I have also developed an interest in energy economics. Use the menu above to navigate around the site and learn more about my experiences and projects.  
+
+  In my past time, I dabble in soccer(huge Manchester United fan), volleyball, and Formula 1"""
+  
+  mainSection = "posts" # your main section
+  
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+  
+  showProjectsList = false # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/gohugoio" # title link for projects list
+
+
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/jackschua"
+    
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/chjack/"
+    
+  [[params.social]]
+    name = "email"
+    link = "mailto:chjack21@vt.edu"
+
