@@ -1,0 +1,115 @@
+.about-container {
+  display: flex;
+  align-items: center; /
+  gap: 20px; 
+}
+
+.profile-picture img {
+  width: 300px; 
+  height: 460px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+.description {
+  max-width: 600px; 
+} 
+
+
+.email {
+  color: #2bbc8a; 
+  font-style: italic;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+.about-container {
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.profile-picture img {
+  width: 80%; 
+  height: auto; 
+}
+
+.description {
+  max-width: 100%; 
+  padding: 0 20px; 
+}
+}
+
+/* Flex container for projects */
+.project-preview {
+display: flex;
+flex-direction: column; 
+align-items: center; 
+text-align: center; 
+margin-bottom: 20px;
+}
+
+/* Style for project image */
+.project-preview .project-image img {
+width: 650px;
+height: 400px;
+object-fit: cover;
+border: 1px solid black; 
+}
+
+/* Title and description styles */
+.project-preview h2 {
+margin: 0;
+font-size: 1.5em;
+color: #009688; 
+}
+
+.project-preview p {
+margin: 0;
+color: #2bbc8a; 
+}
+
+/* Remove underline from links */
+.project-preview a {
+text-decoration: none; 
+color: inherit; 
+}
+
+/* Ensure project details page styles */
+.project-detail-container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.project-detail-container img {
+width: 100%;
+height: auto;
+}
+
+.inline {
+  display: inline;
+  margin-right: 10px; /
+}
+
+.company-round {
+  width: 750px; 
+  height: 750px; 
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+
+.technologies {
+  display: flex;          
+  flex-wrap: wrap;         
+  gap: 0px;               
+  align-items: center;     
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research Projects on Jack Chua</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Research Projects on Jack Chua</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/</guid>
+      <description>Technology Consulting Intern - Data and Analytics&#xD;Sept. 2022 - Nov. 2022&#xA;Kuala Lumpur, Malaysia&#xA;Worked on Power BI dashboard deployments for a power &amp; utilities company. Main responsibilities revolve around creating map visualizations to depict running power meters and regression testing to ensure dashboard features function properly. Also assisted in maintaining data pipelines on Azure. Technology Consulting Intern - Solutions Delivery&#xD;Jun. 2022 - Aug. 2022&#xA;Kuala Lumpur, Malaysia</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/projects/project-a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project-a/</guid>
+      <description>Introduction Here’s an introduction to Project A.&#xA;Sections Section 1: Details Section 2: More details Output Add outputs and findings here.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/projects/project-b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project-b/</guid>
+      <description>Overview This dashboard depicts different measures set out by The Organized Crime Index https://ocindex.net/. The graphs are dynamically filtered according to the user&amp;rsquo;s selection. A k-means clustering graph (with k=5) that clusters the association of each country&amp;rsquo;s GDP to its resilience score is also included.&#xA;Tableau Dashboard Links GitHub Repository </description>
+    </item>
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&#xD;</description>
+    </item>
+  </channel>
+</rss>

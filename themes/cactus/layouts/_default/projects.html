@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section id="projects">
+  <div class="project-list">
+    {{ range where .Pages "Section" "projects" }}
+      <div class="project-preview">
+        <a href="{{ .Permalink }}">
+          <div class="project-description">
+            <p>{{ .Params.shortDescription }}</p>
+            <h2>{{ .Title }}</h2>
+          </div>
+          <div class="project-image">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

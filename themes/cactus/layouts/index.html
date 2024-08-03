@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section id="about">
+  <div class="about-container">
+    <!-- Picture section -->
+    <div class="profile-picture">
+      <img src="{{ "images/jack.jpg" | relURL }}" alt="Profile Picture">
+    </div>
+    <div class="description">
+      {{ if isset .Site.Params "description" }}
+        {{ .Site.Params.description | $.Page.RenderString }}
+      {{ end }}
+    </div>
+  </div>
+  
+  <!-- Social links section -->
+  {{ if isset .Site.Params "social" }}
+    <p>Find me on
+    {{ $length := (len .Site.Params.social) }}
+    {{ $lastIndex := sub $length 1 }}
+    {{ range $index, $elem := .Site.Params.social }}
+      {{ if eq $elem.name "github" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>{{ if ne $index $lastIndex }}{{ if ne (add $index 1) $lastIndex }} , {{ else }}  {{ end }}{{ end }}
+      {{ else if eq $elem.name "linkedin" }}
+        <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>{{ if ne $index $lastIndex }} , or {{ else }} or {{ end }}
+      {{ else if eq $elem.name "email" }}
+        reach out to me at <span class="email">{{ $elem.link | strings.TrimPrefix "mailto:" }}</span>
+      {{ end }}
+    {{ end }}
+    </p>
+  {{ end }}
+  {{ partial "optional-about.html" . }}
+  </section>
+
+ 
+{{ end }}
