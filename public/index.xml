@@ -20,14 +20,14 @@
       <link>http://localhost:1313/projects/project-a/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/project-a/</guid>
-      <description>Introduction Here’s an introduction to Project A.&#xA;Sections Section 1: Details Section 2: More details Output Add outputs and findings here.</description>
+      <description>Overview This project implements a random forest algorithm to help integrate alternative data into economic indicators for better economic forecasting. In short,alternative data are data sources that can provide addiitional insights into a specific subject matter.&#xA;In this case, the random forest model integrates a series of energy consumption and supply chain data into past GDP to forecast the 2023 GDP as apposed to traditional models that only include past historical values as its features.</description>
     </item>
     <item>
       <title></title>
       <link>http://localhost:1313/projects/project-b/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/project-b/</guid>
-      <description>Overview This dashboard depicts different measures set out by The Organized Crime Index https://ocindex.net/. The graphs are dynamically filtered according to the user&amp;rsquo;s selection. A k-means clustering graph (with k=5) that clusters the association of each country&amp;rsquo;s GDP to its resilience score is also included.&#xA;Tableau Dashboard Links GitHub Repository </description>
+      <description>Overview This dashboard depicts different measures set out by The Organized Crime Index https://ocindex.net/. The graphs are dynamically filtered according to the user&amp;rsquo;s selection. A k-means clustering graph (with k=5) that clusters the association of each country&amp;rsquo;s GDP to its resilience score is also included.&#xA;Check it out below or on Tableau Public&#xA;Tableau Dashboard </description>
     </item>
     <item>
       <title>Resume</title>

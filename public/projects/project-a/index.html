@@ -11,20 +11,19 @@
   <title>  | Jack Chua</title>
   <link rel = 'canonical' href = 'http://localhost:1313/projects/project-a/'>
   <meta name="description" content="Hi ! I&#39;m Jack, a recent alumni of the College of Science at Virginia Tech where I majored in Economics and Data Science with a minor in Statistics. 
+  My interest lies in the intersection of statistical modeling, economic research, and alternative data applications. 
   
-  My interest lies in the intersection of statistical modeling, economic research, and alternative data applications. My prior experience includes a stint in technology consulting where I had the opportunity to work on projects in the financial and energy industry. 
-  
-  In the past years, I have also developed an interest in energy economics. Use the menu above to navigate around the site and learn more about my experiences and projects.  
+  My prior experience includes a stint in technology consulting where I had the opportunity to work on projects in the financial and energy industry which prompted me to develop an interest in energy economics. Use the menu above to navigate around the site and learn more about my experiences and projects.  
 
-  In my past time, I dabble in soccer(huge Manchester United fan), volleyball, and Formula 1">
+  In my past time, I dabble in soccer (huge Manchester United fan), tennis, and Formula 1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:url" content="http://localhost:1313/projects/project-a/">
   <meta property="og:site_name" content="Jack Chua">
   <meta property="og:title" content="Jack Chua">
-  <meta property="og:description" content="Introduction Here’s an introduction to Project A.
-Sections Section 1: Details Section 2: More details Output Add outputs and findings here.">
+  <meta property="og:description" content="Overview This project implements a random forest algorithm to help integrate alternative data into economic indicators for better economic forecasting. In short,alternative data are data sources that can provide addiitional insights into a specific subject matter.
+In this case, the random forest model integrates a series of energy consumption and supply chain data into past GDP to forecast the 2023 GDP as apposed to traditional models that only include past historical values as its features.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -32,8 +31,8 @@ Sections Section 1: Details Section 2: More details Output Add outputs and findi
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Jack Chua">
-  <meta name="twitter:description" content="Introduction Here’s an introduction to Project A.
-Sections Section 1: Details Section 2: More details Output Add outputs and findings here.">
+  <meta name="twitter:description" content="Overview This project implements a random forest algorithm to help integrate alternative data into economic indicators for better economic forecasting. In short,alternative data are data sources that can provide addiitional insights into a specific subject matter.
+In this case, the random forest model integrates a series of energy consumption and supply chain data into past GDP to forecast the 2023 GDP as apposed to traditional models that only include past historical values as its features.">
 
   
   
@@ -95,15 +94,48 @@ Sections Section 1: Details Section 2: More details Output Add outputs and findi
 
   <div class="content" itemprop="articleBody">
   
-    <h2 id="introduction">Introduction</h2>
-<p>Here’s an introduction to Project A.</p>
-<h2 id="sections">Sections</h2>
+    <h1 id="overview">Overview</h1>
+<p>This project implements a random forest algorithm to help integrate alternative data into economic indicators for better economic forecasting. In short,alternative data are data sources that can provide addiitional insights into a specific subject matter.</p>
+<p>In this case, the random forest model integrates a series of energy consumption and supply chain data into past GDP to forecast the 2023 GDP as apposed to traditional models that only include past historical values as its features.</p>
+<p>Data sources are accessible directly through the underline links from the findings section.</p>
+<p>The full code / notebook can be found at <a href="https://github.com/jackschua/random-forest-econ/blob/main/Random%20Forest.ipynb">Github</a></p>
+<h1 id="findings">Findings</h1>
+<h2 id="dataset--features-">Dataset / Features :</h2>
+<p>The features used consists of data from:</p>
 <ul>
-<li><strong>Section 1</strong>: Details</li>
-<li><strong>Section 2</strong>: More details</li>
+<li>
+<p><a href="https://databank.worldbank.org/source/world-development-indicators"><u>The World Bank&rsquo;s World Development Indicators</u></a> : Past GDP from 2000 to 2022.</p>
+</li>
+<li>
+<p><a href="https://www.iea.org/data-and-statistics/data-product/world-energy-statistics-and-balances"><u>International Energy Agency</u></a> : Final Energy Consumption for different economic activities (Residential, Transportation, Industry, Commercial &amp; Public Services, and Others).</p>
+</li>
+<li>
+<p><a href="https://lpi.worldbank.org/"><u>The World Bank&rsquo;s Logistics Performance Index</u></a> : Supply chain tracking data that scores the competence of trade activies of different countries (Timeliness, Tracking, Customs, Infrastructure, Logistics Quality, Shipments).</p>
+</li>
 </ul>
-<h2 id="output">Output</h2>
-<p>Add outputs and findings here.</p>
+<img src="/images/columns.png">
+<h2 id="random-forest-predictions">Random Forest Predictions</h2>
+<p>80% of the dataset were used to train the Random Forest model and the remaining 20% are used as testing to evaluate the performance of the model. The table below shows the 10 countries involved in the predictions of their 2023 GDP.
+<img src="/images/actual.png"></p>
+<p>As observed below from the scatter plot, almost all the predictions are close to the actual values except for that one outlier while the residual plot also shows how close the predicted values are to the zero-error red line.
+<img src="/images/predict.png"></p>
+<h2 id="correlation-matrix">Correlation Matrix</h2>
+<p>While useful, relying on a Correlation Matrix to identify the significant features is tough for models with large number of features.
+<img src="/images/matrix.png"></p>
+<h2 id="model-evaluation-feature-importance">Model Evaluation: Feature Importance</h2>
+<p>Instead, by using <a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html">feature_importances_</a>, we can easily identify the features that have the largest effects on prediction for that model. In this case of alternative data, energy data seems to be most useful in predicting GDP (commericial &amp; public services, industry, residential) while supply chain data does not show the same influence.
+<img src="/images/features.png"></p>
+<h2 id="model-evaluation-how-does-it-make-a-choice-">Model Evaluation: How does it make a choice ?</h2>
+<p>As seen from the tree graph below, each tree starts with a node at the top and gradually makes it way down to the final node based on its conditions. In this image, it starts with estimator = 0 (python starts with 0), the random forest then gradually reaches the final node (to the point where squared_erorr = 0) where it is deemed as the final prediction for that tree.</p>
+<p>In this project, our random forest model builds 100 random trees (estimator = 100) with its own conditions and for each iteration of 1 tree, it will make a prediction for the 2023 GDP where the Random Forest finally averages the predictions of all 100 trees to give a final predicted value for the 2023 GDP.</p>
+<img src="/images/download.png">
+<p><a href="/images/download.png" download="tree.png">Download this image for better viewing</a></p>
+<h2 id="model-evaluation-mse--validation-curve">Model Evaluation: MSE &amp; Validation Curve</h2>
+<p>From the validation curve, we can see the initial spike in negative MSE which essentially means that the model is initially underfitted with too few trees (estimators), but it stablizes around the 25th estimators and so. Hence, more trees beyond that does not help much.
+<img src="/images/validation.png"></p>
+<p>Additionally seen from the MSE vs No. of Trees graph, we see lower MSE values up to a certain point as the number of trees increases. Beyond that, the improvements then becomes marginal.</p>
+<img src="/images/mse.png">
+<p>This basically shows how useful the Random Forests is when it comes to handling models with large number of features. They are practical, robust, and most importantly are not senstive prone to the number of estimators.</p>
 
   
   </div>

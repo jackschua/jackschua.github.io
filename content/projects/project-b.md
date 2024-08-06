@@ -4,11 +4,13 @@ image: "/images/dashboard.png"
 draft: false
 ---
 
-## Overview
+# Overview
 
    This dashboard depicts different measures set out by The Organized Crime Index https://ocindex.net/. The graphs are dynamically filtered according to the user's selection. A k-means clustering graph (with k=5)  that clusters the association of each country's GDP to its resilience score is also included. 
 
-## Tableau Dashboard
+   Check it out below or on [Tableau Public](https://public.tableau.com/views/IndependentProject_17139378095650/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) 
+
+# Tableau Dashboard
 
 <div class='tableauPlaceholder' id='viz1722572209793' style='position: relative'>
   <noscript>
@@ -47,7 +49,3 @@ draft: false
   scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-
-## Links
-
-- [GitHub Repository](https://github.com/yourusername/project-b)
