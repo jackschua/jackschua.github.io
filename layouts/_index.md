@@ -9,7 +9,7 @@
     <!-- Embed PDF -->
     <iframe src="/docs/jack_resume_24.pdf" style="width: 100%; height: 600px;" frameborder="0" allowfullscreen></iframe>
     <p>
-      <a href="/docs/jack_resume_24.pdf" download="Jack_Resume24.pdf">Download My Resume (PDF)</a>
+      <a href="/docs/jack_resume_24.pdf" download="jack_resume_24.pdf">Download My Resume (PDF)</a>
     </p>
   </div>
 </div>
