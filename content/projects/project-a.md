@@ -10,7 +10,9 @@ In this case, the random forest model integrates a series of energy consumption 
 
 Data sources are accessible directly through the underline links from the findings section.
 
-The full code / notebook can be found at [Github](https://github.com/jackschua/random-forest-econ/blob/main/Random%20Forest.ipynb) 
+The full code / notebook can be found at [Github](https://github.com/jackschua/random-forest-econ) 
+
+Alternatively, you can read the [project overview / write-up sample](https://drive.google.com/file/d/16FshyPDVgTMJsSpsONXAiNwIasutDtr0/view?usp=drive_link) that I wrote for fun. 
 
 # Findings 
 
